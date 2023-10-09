@@ -1,0 +1,56 @@
+@media screen and (min-width: 601px) {
+    html {
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+         }
+      header {
+        background-color: rgb(135, 139, 144);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 140%;
+         /* Rahmendichte */
+         border-width: 3px;
+         /* Rahmenfarbe */
+         border-color: rgb(72, 48, 44);
+         /* Rahmenstil */
+         border-style: solid;
+          /* Abstand */
+          margin: 10px;
+      }
+      header ul {
+        list-style-type: none;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      header ul li {
+        padding: 10px;
+      }
+      header ul li div {
+        width: 100%;
+      }
+      header img {
+        width: 100px;
+      }
+      header ul li a {
+        text-decoration-line: none;
+        color: rgb(51, 51, 195);
+        font-size: 100%;
+       
+
+      }
+      footer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 100%;
+        height: 140%;
+    
+    
+      }
+}

@@ -1,0 +1,180 @@
+body{
+    background-image: linear-gradient(
+          to right,
+          rgba(55, 91, 105, 0.418),
+          rgba(255, 192, 203, 0.445),
+          rgba(172, 101, 101, 0.452),
+          rgba(88, 48, 48, 0.452),
+          rgba(71, 56, 56, 0.459),
+          rgba(65, 92, 102, 0.356),
+          rgba(135, 121, 124, 0.445)
+        );
+        border: blueviolet solid 1px;
+        box-shadow: 4px 4px 4px gray ;
+        border-radius: 10px;
+        transition: 0.5s;
+        padding: 10px;
+        margin: 5px;
+
+}
+body:hover{
+    background-color: rgb(103, 134, 172);
+    outline: outset;
+    box-shadow: 8px 8px 8px rgb(128, 42, 42);
+    
+}
+header ul li a {
+    text-decoration-line: none;
+    color: navy;
+    padding: 8px;
+    transition: 0.3s;
+    
+  }
+  header ul li a:hover {
+    
+    background-color: rgb(108, 108, 173);
+    border-radius: 10px;
+    transition: 0.5s;
+    
+  }
+  main{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+main .video{
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgb(149, 139, 139) ;
+    margin:5px;
+    padding: 8px;
+}
+main .audios{
+    background-color: rgb(211, 169, 169);
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgb(158, 104, 104) ;
+    margin:5px;
+    padding: 8px;
+}
+main .box1{
+    overflow: hidden;
+    width: 300px;
+    height: 50px;
+    outline-style:double ;
+    box-shadow:5px 5px 5px rgb(192, 111, 155);
+    
+    animation-name: box_1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    background-color:rgb(116, 170, 170);
+    animation-timing-function: ease;
+    border:blue solid 2px;
+    animation-fill-mode:forwards ;
+  }
+  
+  p{
+    font-size:18px;
+    color: rgb(149, 108, 79);
+    animation-name: p;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-color:azure;
+    animation-timing-function: ease;
+    
+    animation-fill-mode:forwards ;
+  }
+   @keyframes box_1 {
+    0% {
+     
+      transform:  translateX(0) translateY(0) scale(0);
+      
+      
+      filter: sepia(0) ;
+      
+      
+    }
+    50% {
+      
+      transform:  translateX(50vh) translateY(50vh) scale(-1);
+     
+      filter: sepia(1) ;
+    }
+    100% {
+     
+        transform:  translateX(0) translateY(0) scale(1);
+        
+        filter: sepia(2);
+       
+      }
+     }
+   @keyframes p {
+    0% {
+     color:  rgb(53, 4, 53) ;
+      
+    }
+    50% {
+      color:rgb(31, 8, 100) ;
+       
+    }
+     100% { 
+      color: crimson;
+    }
+   }
+   #b1{
+    position: fixed;
+    top:40vh;
+    left:0px;
+
+   }
+   #b2{
+    position: fixed;
+    top:40vh;
+    right:0px;
+
+   }
+   nav img {
+    height: 50px;
+    width: 50px;
+   }
+   footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 100%;
+    height: 300px;
+    background-color: rgb(173, 137, 206);
+    
+
+  }
+  footer img{
+   width: 200px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   
+  }
+  .box2{
+    background-color: rgb(173, 137, 206);
+    width: 400px;
+    height:40px;
+    margin-bottom: 70px;
+  }
+  .box3
+  {
+    background-color: rgb(173, 137, 206);
+    overflow: auto;
+    width: 400px;
+    height:100px;
+  }
+  #div1 {
+    color: rgb(7, 7, 11);
+    background-color: rgb(88, 65, 65);
+  }
+  videos{
+    width: 200px;
+    height: 200px;
+  }

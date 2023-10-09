@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="allgemein.css" />
+    <link rel="stylesheet" href="desktop.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <script src="datei.js"></script>
+    <script src="tags.js"></script>
+    <script src="speicher.js"></script>
+
+    <title>porjekt</title>
+    <style>
+      header {
+        background-color: rgb(221, 104, 178);
+      }
+      header ul {
+        list-style-type: none;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      header ul li {
+        padding: 10px;
+      }
+      header ul li a {
+        text-decoration-line: none;
+        color: rgb(81, 39, 158);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="impress.html">impressum</a></li>
+        <li><a href="kontakt.html">kontakt</a></li>
+        <li><a href="produkts.html">produkte</a></li>
+        <li><a href="audios.html">Audios</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </header>
+    <main></main>
+    <nav></nav>
+    <footer id="fo">
+      <h1>Navigator Informationen</h1>
+      <br />
+
+      <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+
+      <p><strong>Browser Name:</strong> <span id="browserName"></span></p>
+
+      <p><strong>Browser Version:</strong> <span id="browserVersion"></span></p>
+
+      <p><strong>Platform:</strong> <span id="platform"></span></p>
+
+      <p><strong>Language:</strong> <span id="language"></span></p>
+
+      <div>copyright:&copy;rania mahmoud</div>
+    </footer>
+  </body>
+
+  <script>
+    const m = document.getElementsByTagName("main")[0];
+    const nav = document.getElementsByTagName("nav")[0];
+    nav.innerHTML +=
+      blockElementEx(
+        "button",
+        singleElementEx("img", [{ name: "src", wert: "arrowleft.png" }]),
+        [
+          { name: "onclick", wert: "window.history.back()" },
+          { name: "id", wert: "b1" },
+        ]
+      ) +
+      blockElementEx(
+        "button",
+        singleElementEx("img", [{ name: "src", wert: "arrowright.png" }]),
+        [
+          { name: "onclick", wert: "window.history.forward()" },
+          { name: "id", wert: "b2" },
+        ]
+      );
+
+    const footer = document.getElementsByTagName("footer")[0];
+    // Informationen aus dem navigator-Objekt abrufen und in HTML anzeigen
+    document.getElementById("userAgent").innerHTML += singleElementEx("br");
+
+    document.getElementById("userAgent").textContent += navigator.userAgent;
+    nav.innerHTML += singleElementEx("br");
+
+    document.getElementById("browserName").textContent = navigator.appName;
+
+    document.getElementById("browserVersion").textContent =
+      navigator.appVersion;
+
+    document.getElementById("platform").textContent = navigator.platform;
+
+    document.getElementById("language").textContent = navigator.language;
+
+    nav.innerHTML += blockElementEx(
+      "div",
+      singleElementEx("img", [{ name: "src", wert: "f.png" }]) +
+        singleElementEx("img", [{ name: "src", wert: "y.png" }]) +
+        singleElementEx("img", [{ name: "src", wert: "inst.png" }]) +
+        singleElementEx("img", [{ name: "src", wert: "tw.png" }]),
+      [{ name: "style", wert: "text-align:center;" }]
+    );
+    footer.innerHTML += ` <div style="width: 100%;position: relative;" class="karte">
+
+                            <iframe style="width: 100%;height: 250px;" src="https://maps.google.com/maps?width=400&amp;height=300&amp;hl=en&amp;q=d%C3%BCren%2C%20ober%20str%2C%20Germany+(D%C3%BCren)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+                            </iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+
+                            <small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by
+
+                            <a href="http://www.googlemapsgenerator.com/de/">googlemapsgen (de)
+
+                            </a> & <a href="https://nouc.se/">låna pengar utan UC
+
+                            </a></small>
+
+                            </div>`;
+
+    m.innerHTML += blockElementEx(
+      "table",
+      blockElementEx(
+        "tr",
+        blockElementEx("th", "Kontakt") + blockElementEx("th", "Ereichen")
+      ) +
+        blockElementEx(
+          "tr",
+          blockElementEx(
+            "td",
+            singleElementEx("img", [
+              {
+                name: "src",
+                wert: "phone.png",
+              },
+            ])
+          ) +
+            blockElementEx(
+              "td",
+              blockElementEx("p", "tel:01645357894", []) +
+                singleElementEx("hr"),
+              []
+            ),
+          []
+        ) +
+        blockElementEx(
+          "tr",
+          blockElementEx(
+            "td",
+            singleElementEx("img", [
+              {
+                name: "src",
+                wert: "gmail.png",
+              },
+            ]),
+            []
+          ) +
+            blockElementEx(
+              "td",
+              blockElementEx("p", "email:zukunft @ gmail.com", []) +
+                singleElementEx("hr"),
+              []
+            ),
+          []
+        ) +
+        blockElementEx(
+          "tr",
+          blockElementEx(
+            "td",
+            singleElementEx("img", [
+              {
+                name: "src",
+                wert: "fax.png",
+              },
+            ]),
+            []
+          ) +
+            blockElementEx(
+              "td",
+              blockElementEx("p", "fax:01645667894", []) +
+                singleElementEx("hr"),
+              []
+            ),
+          []
+        ),
+
+      [
+        "style",
+        "height:250px;background-color: rgba(29, 88, 164, 0.196);padding:10px;",
+      ]
+    );
+    m.innerHTML += blockElementEx(
+      "table",
+      blockElementEx(
+        "tr",
+        blockElementEx("th", "Über") + blockElementEx("th", "Uns")
+      ) +
+        blockElementEx(
+          "tr",
+          blockElementEx("td", singleElementEx("img", [
+              {
+                name: "src",
+                wert: "company.png",
+              },
+            ]), []) +
+            blockElementEx(
+              "td",
+              blockElementEx("p", "Name: Zukunft firma", []) + singleElementEx("hr"),
+              []
+            ),
+          []
+        ) +
+        blockElementEx(
+          "tr",
+          blockElementEx("td",  singleElementEx("img", [
+              {
+                name: "src",
+                wert: "company.png",
+              },
+            ]), []) +
+            blockElementEx(
+              "td",
+              blockElementEx("p", "Adresse: Mauer st 43,heidelberg", []) +
+                singleElementEx("hr"),
+              []
+            ),
+          []
+        ),
+      [
+        "style",
+        "height:250px;background-color: rgba(29, 88, 164, 0.196);padding:10px;",
+      ]
+    );
+    m.innerHTML += blockElementEx(
+      "p",
+      "Wir biten Ihnen Eine Übersicht aktueller Bücher, CDs und Fachzeitschriften im Bereich künstliche intelligenzfür Studium, Beruf und Praxis. Fachliteratur schnell finden und auf dem Laufenden bleiben.",
+      [
+        "style",
+        "height:250px;background-color: rgba(29, 88, 164, 0.196);width:600px; font-size:larger;",
+      ]
+    );
+    m.innerHTML += singleElementEx("hr");
+  </script>
+</html>

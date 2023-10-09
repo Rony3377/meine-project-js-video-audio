@@ -1,0 +1,52 @@
+@media screen and (max-width: 600px) {
+html {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+     }
+  header {
+    background-color: rgb(113, 73, 68);
+    display:grid;
+    grid-template-columns: 50% 50%;
+    height: 200%;
+     /* Rahmendichte */
+     border-width: 3px;
+     /* Rahmenfarbe */
+     border-color: tomato;
+     /* Rahmenstil */
+     border-style: solid;
+      /* Abstand */
+      margin: 10px;
+  }
+  header ul {
+    list-style-type: none;
+    padding: 0px;
+    display:grid;
+    width:100%;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  header ul li {
+    padding: 10px;
+  }
+  header ul li:nth-child(1){
+    grid-column-end: span 2;
+   text-align: center;
+  }
+  header ul li a {
+    text-decoration-line: none;
+    color: rgb(110, 28, 28);
+    font-size: 160%;
+    grid-column-start: 2;
+  }
+  footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 160%;
+    height: 200%;
+
+
+  }
+
+}
